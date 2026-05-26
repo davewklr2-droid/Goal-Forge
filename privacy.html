@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Privacy Policy — Goal-Forge</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(20, 30, 55, 0.6);
+            --border-color: rgba(0, 242, 254, 0.25);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --neon-blue: #00f2fe;
+            --neon-purple: #4facfe;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(79, 172, 254, 0.05) 0%, transparent 40%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: calc(20px + env(safe-area-inset-top)) 20px calc(20px + env(safe-area-inset-bottom)) 20px;
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            justify-content: space-around;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 6px 12px;
+            border-radius: 8px;
+        }
+
+        .navbar a.active, .navbar a:hover {
+            color: var(--neon-blue);
+            background: rgba(0, 242, 254, 0.1);
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 30px 24px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .close-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .close-btn:hover {
+            background: rgba(245, 87, 108, 0.2);
+            border-color: #f5576c;
+            color: #ff4a5a;
+        }
+
+        .last-updated {
+            font-size: 12px;
+            color: var(--neon-blue);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+
+        .content::-webkit-scrollbar {
+            width: 4px;
+        }
+        .content::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-size: 15px;
+            color: var(--text-main);
+            margin: 20px 0 8px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        .contact-link {
+            color: var(--neon-blue);
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding-top: 30px;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" id="navBarMenu">
+        <a href="index.html">Home</a>
+        <a href="privacy.html" class="active">Privacy</a>
+        <a href="marketing.html">About</a>
+        <a href="support.html">Support</a>
+    </nav>
+
+    <div class="container">
+        <div class="header-wrapper">
+            <h1>Privacy Policy</h1>
+            <button class="close-btn" onclick="triggerClose()">Close</button>
+        </div>
+        
+        <div class="last-updated">Last updated: May 2026</div>
+
+        <div class="content">
+            <p>This Privacy Policy outlines how data is handled within the <strong>Goal-Forge</strong> mobile application, developed by <strong>George Whitaker</strong>.</p>
+
+            <h2>1. Core App Data & Processing</h2>
+            <p>Goal-Forge is built to provide workout organization, customized training routines, plans, metrics, and progress logs. Most data generated by your activities remains stored locally on your device to ensure quick access and minimal latency.</p>
+
+            <h2>2. Camera and Photo Library Access</h2>
+            <p>The app may request permission to access your device’s camera or photo gallery. This access is strictly optional and is utilized exclusively when you choose to upload images to log your training progression or customize your profile. No images are transferred to our servers without your explicit action.</p>
+
+            <h2>3. Performance Analytics Partners</h2>
+            <p>To identify optimization errors, maintain stability, and continuously enhance the application interface, we integrate analytics tools provided by <strong>Google (Firebase)</strong>. These services process technical application logs and crash reports to help us diagnose functionality failures.</p>
+
+            <h2>4. Marketing and Attribution</h2>
+            <p>We work with <strong>AppsFlyer</strong>, an industry-standard attribution platform, to understand marketing performance and analyze patterns regarding how users discover our application. This data helps us optimize deployment strategies and marketing allocation.</p>
+
+            <h2>5. App Tracking Transparency (iOS)</h2>
+            <p>On iOS devices, the application may display a request to track your activity across other companies' apps and websites. You have the full right to decline this request. Declining tracking will not limit or restrict the core features, performance, or availability of Goal-Forge.</p>
+
+            <h2>6. Web Content Display (WebView)</h2>
+            <p>The application may employ WebView technologies to display specific external web-based text resources, legal disclosures, or documents (including this Privacy Policy page) directly inside the interface for a smoother experience.</p>
+
+            <h2>7. Health & Medical Disclaimer</h2>
+            <p>Goal-Forge is a tool intended for general fitness tracking and training plan organization. It does not provide medical guidance, professional diagnoses, or clinical therapy. The service does not replace standard medical advice or consultation with health professionals.</p>
+
+            <h2>8. Contact Channel</h2>
+            <p>If you have questions regarding the data processing mechanisms inside the application, feel free to reach out via email at: <a href="mailto:davewklr2@gmail.com" class="contact-link">davewklr2@gmail.com</a>.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2026 George Whitaker. All rights reserved.
+    </footer>
+
+    <script>
+        function detectWebView() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/iPhone|iPod|iPad/.test(userAgent) && !window.MSStream) {
+                if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWebView) {
+                    document.getElementById('navBarMenu').style.display = 'none';
+                }
+            }
+        }
+
+        function triggerClose() {
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeWebView) {
+                window.webkit.messageHandlers.closeWebView.postMessage(null);
+            } else {
+                alert("This action triggers native view closure inside the mobile application.");
+            }
+        }
+
+        window.onload = detectWebView;
+    </script>
+
+</body>
+</html>
