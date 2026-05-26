@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>About Goal-Forge — Marketing</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(20, 30, 55, 0.6);
+            --border-color: rgba(0, 242, 254, 0.25);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --neon-blue: #00f2fe;
+            --neon-purple: #4facfe;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(79, 172, 254, 0.05) 0%, transparent 40%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: calc(20px + env(safe-area-inset-top)) 20px calc(20px + env(safe-area-inset-bottom)) 20px;
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            justify-content: space-around;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 6px 12px;
+            border-radius: 8px;
+        }
+
+        .navbar a.active, .navbar a:hover {
+            color: var(--neon-blue);
+            background: rgba(0, 242, 254, 0.1);
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 30px 24px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 12px;
+        }
+
+        .content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        .highlight-box {
+            background: rgba(0, 242, 254, 0.05);
+            border-left: 3px solid var(--neon-blue);
+            padding: 12px 16px;
+            border-radius: 4px 12px 12px 4px;
+            margin: 20px 0;
+            color: var(--text-main);
+            font-size: 13.5px;
+        }
+
+        .footer {
+            margin-top: auto;
+            padding-top: 30px;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="marketing.html" class="active">About</a>
+        <a href="support.html">Support</a>
+    </nav>
+
+    <div class="container">
+        <h1>About Goal-Forge</h1>
+        
+        <div class="content">
+            <p>My name is George Whitaker. As an independent mobile software engineer, I strive to design applications that bring measurable utility, structure, and technological simplicity into sport analytics and execution.</p>
+            
+            <p><strong>Goal-Forge</strong> is a comprehensive environment for planning out complex football drills, scheduling routines, and monitoring specific athletic workloads over cycles. It is tailored to streamline information tracking for players who value structure.</p>
+
+            <div class="highlight-box">
+                <strong>Current Monetization Status:</strong><br>
+                Goal-Forge currently features no paid unlocks, locked features, or recurrent subscription systems. All features are completely open and accessible to our initial users.
+            </div>
+
+            <p>In upcoming product milestones, I intend to safely build and roll out premium subscription layers or advanced customization tiers. This future evolution will help support development, sustain server stability, and allow me to introduce deep, data-driven optimization mechanics into the system.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2026 George Whitaker. All rights reserved.
+    </footer>
+
+</body>
+</html>
