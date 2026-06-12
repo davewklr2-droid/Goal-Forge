@@ -2,148 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>About Goal-Forge — Marketing</title>
-    <style>
-        :root {
-            --bg-color: #0b0f19;
-            --card-bg: rgba(20, 30, 55, 0.6);
-            --border-color: rgba(0, 242, 254, 0.25);
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --neon-blue: #00f2fe;
-            --neon-purple: #4facfe;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(79, 172, 254, 0.05) 0%, transparent 40%);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: calc(20px + env(safe-area-inset-top)) 20px calc(20px + env(safe-area-inset-bottom)) 20px;
-        }
-
-        .navbar {
-            width: 100%;
-            max-width: 500px;
-            display: flex;
-            justify-content: space-around;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 12px;
-            border-radius: 16px;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-
-        .navbar a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            padding: 6px 12px;
-            border-radius: 8px;
-        }
-
-        .navbar a.active, .navbar a:hover {
-            color: var(--neon-blue);
-            background: rgba(0, 242, 254, 0.1);
-            text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
-        }
-
-        .container {
-            width: 100%;
-            max-width: 500px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 30px 24px;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        h1 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 12px;
-        }
-
-        .content {
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-muted);
-        }
-
-        p {
-            margin-bottom: 16px;
-        }
-
-        .highlight-box {
-            background: rgba(0, 242, 254, 0.05);
-            border-left: 3px solid var(--neon-blue);
-            padding: 12px 16px;
-            border-radius: 4px 12px 12px 4px;
-            margin: 20px 0;
-            color: var(--text-main);
-            font-size: 13.5px;
-        }
-
-        .footer {
-            margin-top: auto;
-            padding-top: 30px;
-            font-size: 12px;
-            color: var(--text-muted);
-            text-align: center;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalForge - Football Training Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
 
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="marketing.html" class="active">About</a>
-        <a href="support.html">Support</a>
-    </nav>
-
-    <div class="container">
-        <h1>About Goal-Forge</h1>
-        
-        <div class="content">
-            <p>My name is George Whitaker. As an independent mobile software engineer, I strive to design applications that bring measurable utility, structure, and technological simplicity into sport analytics and execution.</p>
-            
-            <p><strong>Goal-Forge</strong> is a comprehensive environment for planning out complex football drills, scheduling routines, and monitoring specific athletic workloads over cycles. It is tailored to streamline information tracking for players who value structure.</p>
-
-            <div class="highlight-box">
-                <strong>Current Monetization Status:</strong><br>
-                Goal-Forge currently features no paid unlocks, locked features, or recurrent subscription systems. All features are completely open and accessible to our initial users.
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+                    <svg class="w-6 h-6 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                    </svg>
+                </div>
+                <span class="font-bold text-xl tracking-tight bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">GoalForge</span>
             </div>
-
-            <p>In upcoming product milestones, I intend to safely build and roll out premium subscription layers or advanced customization tiers. This future evolution will help support development, sustain server stability, and allow me to introduce deep, data-driven optimization mechanics into the system.</p>
+            <nav class="space-x-6 text-sm font-medium">
+                <a href="marketing.html" class="text-emerald-400 font-semibold">About</a>
+                <a href="support.html" class="text-slate-400 hover:text-white transition">Support</a>
+                <a href="privacy.html" class="text-slate-400 hover:text-white transition">Privacy</a>
+            </nav>
         </div>
-    </div>
+    </header>
 
-    <footer class="footer">
-        &copy; 2026 George Whitaker. All rights reserved.
+    <main class="flex-grow">
+        <section class="max-w-4xl mx-auto px-6 pt-16 pb-12 text-center">
+            <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 mb-6">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Free Football Utility Planner</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight max-w-2xl mx-auto mb-6">
+                Plan Your Football Training Week With Ease
+            </h1>
+            
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8">
+                GoalForge is a simple, offline-first sport planning tool built for amateur players and sports enthusiasts. Save custom drills, map your week, and stay organized.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="support.html" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl transition-all text-sm flex items-center justify-center">
+                    Contact Support
+                </a>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-900">
+            <div class="bg-slate-900 border border-slate-800/80 rounded-2xl p-8 shadow-md">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="space-y-4 max-w-lg">
+                        <h3 class="text-xl font-bold text-white">Ad-Supported Model & Rewards</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            GoalForge is a free utility planner. To keep it free, we integrate standard Unity Ads. Users can optionally watch a Rewarded video on the post-workout screen to receive a bonus: <strong>5 hours of completely ad-free planning!</strong>
+                        </p>
+                    </div>
+                    <div class="p-6 bg-slate-950/60 rounded-xl border border-slate-850/80 text-center w-full md:w-auto shrink-0">
+                        <div class="text-3xl font-extrabold text-emerald-400 mb-1">0$</div>
+                        <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">No Subscriptions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <div class="bg-amber-500/5 border border-amber-500/10 rounded-2xl p-6">
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    <strong>Important Disclaimer:</strong> GoalForge is a sports planning organizer tool for general drill note-taking and scheduler tracking. The app does not provide medical advice, diagnosis, treatment, conditioning guidance, or professional sports recommendations. Users are fully responsible for choosing exercises suitable for their own physical shape and conditions.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-900 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+            <p>&copy; 2026 GoalForge. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="marketing.html" class="hover:text-slate-300">About App</a>
+                <a href="support.html" class="hover:text-slate-300">Support</a>
+                <a href="privacy.html" class="hover:text-slate-300">Privacy Policy</a>
+            </div>
+        </div>
     </footer>
 
 </body>
