@@ -4,116 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoalForge - Football Training Planner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #020617;
-            color: #f1f5f9;
-            min-height: screen;
+            background-color: #020617 !important;
+            color: #f1f5f9 !important;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            min-height: 100vh;
         }
-        header {
+        .header-bar {
             border-bottom: 1px solid #1e293b;
-            background-color: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(8px);
-            position: sticky;
-            top: 0;
-            z-index: 50;
+            background-color: #0f172a;
+            padding: 20px;
         }
-        .container {
-            max-width: 896px;
+        .header-container {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 24px;
-        }
-        .header-wrap {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            height: 72px;
-        }
-        .logo-area {
-            display: flex;
             align-items: center;
-            gap: 12px;
         }
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            background-color: #10b981;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo-text {
+        .brand-name {
             font-size: 20px;
             font-weight: 700;
-            letter-spacing: -0.5px;
-            background: linear-gradient(to right, #34d399, #5eead4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #34d399;
         }
-        nav { display: flex; gap: 24px; }
-        nav a {
-            font-size: 14px;
-            font-weight: 500;
+        .top-nav a {
             color: #94a3b8;
             text-decoration: none;
-            transition: color 0.2s;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: 500;
         }
-        nav a:hover, nav a.active { color: #34d399; }
-        
-        main {
-            flex-grow: 1;
+        .top-nav a:hover {
+            color: #34d399;
+        }
+        .main-content {
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 64px 0;
+            padding: 40px 20px;
         }
-        .hero { text-align: center; max-width: 672px; }
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            border-radius: 9999px;
-            padding: 6px 16px;
-            margin-bottom: 24px;
-        }
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #34d399;
-            border-radius: 50%;
-        }
-        .badge-text {
-            font-size: 12px;
-            font-weight: 600;
-            color: #34d399;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+        .hero-box {
+            text-align: center;
+            max-width: 600px;
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            padding: 40px;
+            border-radius: 24px;
         }
         h1 {
-            font-size: 40px;
+            font-size: 36px;
             font-weight: 800;
             color: #ffffff;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
+            margin-bottom: 16px;
         }
-        .hero p {
-            font-size: 18px;
+        p {
+            font-size: 16px;
             color: #94a3b8;
             line-height: 1.6;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
         }
-        .grid {
-            display: grid;
-            grid-template-cols: 1fr;
-            gap: 16px;
-            max-width: 6
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .lnk-btn {
+            display: block;
+            background-color: #1e293b;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid #334155;
+            transition: all 0.2s;
+        }
+        .lnk-btn:hover {
+            background-color: #0f172a;
+            border-color: #34d399;
+            color: #34d399;
+        }
+        footer {
+            background-color: #020617;
+            border-top: 1px solid #0f172a;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <div class="header-container">
+            <div class="brand-name">GoalForge</div>
+            <div class="top-nav">
+                <a href="https://davewklr2-droid.github.io/Goal-Forge/marketing.html">About</a>
+                <a href="https://davewklr2-droid.github.io/Goal-Forge/support.html">Support</a>
+                <a href="https://davewklr2-droid.github.io/Goal-Forge/privacy.html">Privacy</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="hero-box">
+            <h1>Welcome to GoalForge</h1>
+            <p>The official web utility hub for the GoalForge football training planner application. Manage your practice routines, check app guidelines, and get customer support.</p>
+            
+            <div class="btn-group">
+                <a class="lnk-btn" href="https://davewklr2-droid.github.io/Goal-Forge/marketing.html">View Product Information & Features</a>
+                <a class="lnk-btn" href="https://davewklr2-droid.github.io/Goal-Forge/support.html">Contact Support & Submit Ticket</a>
+                <a class="lnk-btn" href="https://davewklr2-droid.github.io/Goal-Forge/privacy.html">Read Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 GoalForge. All rights reserved. | <a href="https://davewklr2-droid.github.io/Goal-Forge/privacy.html" style="color: #64748b; text-decoration: underline;">Privacy</a></p>
+    </footer>
+
+</body>
+</html>
